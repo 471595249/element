@@ -31,11 +31,22 @@
     "test:watch": "npm run build:theme && cross-env BABEL_ENV=test karma start test/unit/karma.conf.js"
   },
   "faas": [
-
+    {
+      "domain": "element",
+      "public": "temp_web/element"
+    },
+    {
+      "domain": "element-theme",
+      "public": "examples/element-ui",
+      "build": [
+        "yarn",
+        "npm run deploy:build"
+      ]
+    }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/471595249/element"
+    "url": "git@github.com:ElemeFE/element.git"
   },
   "homepage": "http://element.eleme.io",
   "keywords": [
