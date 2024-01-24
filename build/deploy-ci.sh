@@ -13,6 +13,7 @@ if [ "$TRAVIS_TAG" ]; then
   # build lib
   npm run dist
   cd temp_web
+  echo "test"
   git clone https://$ROT_TOKEN@github.com/ElementUI/lib.git && cd lib
   rm -rf `find * ! -name README.md`
   cp -rf ../../lib/** .
